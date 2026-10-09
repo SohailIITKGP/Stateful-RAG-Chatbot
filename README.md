@@ -9,7 +9,7 @@ This project is a sophisticated, yet easy-to-run Conversational RAG (Retrieval-A
 * **Conversational Memory:** The chatbot remembers the context of the conversation to answer follow-up questions accurately.
 * **Retrieval-Augmented Generation (RAG):** Reduces model hallucinations by fetching relevant information from a trusted knowledge base (ChromaDB) before generating an answer.
 * **Interactive Web UI:** A user-friendly and responsive chat interface built with Gradio.
-* **Automated Hardware Detection:** Intelligently detects and utilizes the best available hardware (**NVIDIA GPU (CUDA)**, **Apple Silicon (MPS)**, or **CPU**).
+* **Automated Hardware Detection:** Intelligently detects and utilizes the best available hardware (**NVIDIA GPU (CUDA)**, or **CPU**).
 * **Conditional Quantization:** Automatically applies 4-bit quantization when an NVIDIA GPU is detected, significantly boosting performance and reducing memory usage.
 * **Modular Codebase:** The project is organized into logical modules for configuration, data management, vector store creation, and the RAG pipeline, making it easy to understand and extend.
 
@@ -97,7 +97,7 @@ Once it's running, open the local URL shown in your terminal (e.g., `http://127.
 
 ## Performance & Customization
 
-* **Hardware:** Performance is highly dependent on your hardware. An NVIDIA GPU (CUDA) will provide the best experience. The app will run on an Apple Silicon Mac (MPS) or a CPU, but with higher latency.
+* **Hardware:** Performance is highly dependent on your hardware. An NVIDIA GPU (CUDA) will provide the best experience. The app will run on CPU, but with higher latency.
 * **Changing the Model:** You can easily switch the language model by editing the `LLM_MODEL_NAME` variable in the **`config.py`** file. For example, to use the more powerful (but much more demanding) Gemma model, change it to:
     ```python
     # in config.py
